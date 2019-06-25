@@ -51,8 +51,8 @@ setShareInfo({
     setShareInfo({
       title: 'wx-qq-share定制微信、qq分享',
       summary: '定制微信，手机QQ，QQ空间APP内的分享内容。定制微信，手机QQ，QQ空间APP内的分享内容。',
-      pic: 'http://www.fxss5201.cn/wx-qq-share/share.jpg',
-      url: 'http://www.fxss5201.cn/wx-qq-share/'
+      pic: 'https://github.com/fxss5201/wx-qq-share/blob/master/docs/share.jpg',
+      url: 'https://fxss5201.github.io/wx-qq-share/'
     })
   }
 }
