@@ -2,6 +2,8 @@
 
 定制微信，手机QQ，QQ空间APP内的分享内容。代码参照<http://open.mobile.qq.com/api/component/share>，修改点如下：
 
+示例：![示例](./qrcode.png)，此示例暂时只提供QQ和QQ空间分享（微信需要配置参数）。
+
 1. 将微信改为采用最新版1.4.0，并加入`updateAppMessageShareData`和`updateTimelineShareData`方法；
 2. 增加`wxUrl`参数，微信分享链接时该链接域名或路径必须与当前页面对应的公众号JS安全域名一致即可，但手机QQ限制分享URL必须与页面URL同一域名，否则设置不生效，所以此处增加单独设置微信分享链接，仅在微信APP分享时会优先采用；
 3. 增加`type`和`dataUrl`参数，用于设置`onMenuShareAppMessage`可使用；
