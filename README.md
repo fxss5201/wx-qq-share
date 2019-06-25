@@ -7,6 +7,8 @@
 3. 增加`type`和`dataUrl`参数，用于设置`onMenuShareAppMessage`可使用；
 4. 支持`import`引用。
 
+更多关于微信设置的请参照[微信官方文档](https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html#10)
+
 ## 用法 ##
 
 ### 使用模块加载器 ###

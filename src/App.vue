@@ -3,17 +3,17 @@
     <h1>wx-qq-share</h1>
     <p class="text-left word-break">定制微信，手机QQ，QQ空间APP内的分享内容。代码参照<a href="http://open.mobile.qq.com/api/component/share">http://open.mobile.qq.com/api/component/share</a>，修改点如下</p>
     <ol class="text-left word-break">
-      <li>将微信改为采用最新版1.4.0，并加入`updateAppMessageShareData`和`updateTimelineShareData`方法；</li>
-      <li>增加`wxUrl`参数，微信分享链接时该链接域名或路径必须与当前页面对应的公众号JS安全域名一致即可，但手机QQ限制分享URL必须与页面URL同一域名，否则设置不生效，所以此处增加单独设置微信分享链接，微信分享会优先采用；</li>
-      <li>增加`type`和`dataUrl`参数，用于设置`onMenuShareAppMessage`可使用；</li>
-      <li>支持`import`引用。</li>
+      <li>将微信改为采用最新版1.4.0，并加入<span class="code">updateAppMessageShareData</span>和<span class="code">updateTimelineShareData</span>方法；</li>
+      <li>增加<span class="code">wxUrl</span>参数，微信分享链接时该链接域名或路径必须与当前页面对应的公众号JS安全域名一致即可，但手机QQ限制分享URL必须与页面URL同一域名，否则设置不生效，所以此处增加单独设置微信分享链接，微信分享会优先采用；</li>
+      <li>增加<span class="code">type</span>和<span class="code">dataUrl</span>参数，用于设置<span class="code">onMenuShareAppMessage</span>可使用；</li>
+      <li>支持<span class="code">import</span>引用。</li>
     </ol>
     <div class="text-left">
       <h2>用法：</h2>
       <h3>使用模块加载器</h3>
       <pre v-highlightjs="code1"><code class="sh"></code></pre>
       <pre v-highlightjs="code2"><code class="js"></code></pre>
-      <div>更多关于微信设置的请参照<a href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html#10">微信官方文档</a></div>
+      <div>更多关于微信设置的请参照<a href="https://developers.weixin.qq.com/doc/offiaccount/OA_Web_Apps/JS-SDK.html#10">微信官方文档</a>。</div>
     </div>
   </div>
 </template>
@@ -65,7 +65,7 @@ setShareInfo({
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #333;
-  margin-top: 60px auto;
+  margin: 60px auto;
   font-size: 14px;
   max-width: 888px;
   line-height: 1.5;
@@ -75,6 +75,11 @@ setShareInfo({
 }
 .word-break {
   word-break: break-all;
+}
+.code,
+a {
+  margin: 0 5px;
+  color: #1190fa;
 }
 @import "./style/highlightjs.css";
 </style>
