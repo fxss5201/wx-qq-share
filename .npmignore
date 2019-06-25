@@ -1,5 +1,13 @@
 .DS_Store
-node_modules
+node_modules/
+src/
+packages/
+public/
+docs/
+vue.config.js
+babel.config.js
+*.map
+*.html
 
 # local env files
 .env.local
@@ -17,4 +25,4 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw*

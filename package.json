@@ -1,12 +1,20 @@
 {
-  "name": "wx-qq-share",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@fxss5201/wx-qq-share",
+  "version": "0.1.1",
+  "description": "wx-qq-share定制微信、qq分享",
+  "main": "lib/wx-qq-share.umd.min.js",
+  "private": false,
+  "license": "MIT",
+  "author": "fxss5201",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "lib": "vue-cli-service build --target lib --name wx-qq-share --dest lib packages/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fxss5201/wx-qq-share.git"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -22,6 +30,7 @@
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.1.0",
+    "vue-highlightjs": "^1.3.3",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {

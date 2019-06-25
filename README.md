@@ -1,29 +1,39 @@
-# wx-qq-share
+# wx-qq-share #
 
-## Project setup
-```
-npm install
-```
+定制微信，手机QQ，QQ空间APP内的分享内容。代码参照<http://open.mobile.qq.com/api/component/share>，修改点如下：
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. 将微信改为采用最新版1.4.0，并加入`updateAppMessageShareData`和`updateTimelineShareData`方法；
+2. 增加`wxUrl`参数，微信分享链接时该链接域名或路径必须与当前页面对应的公众号JS安全域名一致即可，但手机QQ限制分享URL必须与页面URL同一域名，否则设置不生效，所以此处增加单独设置微信分享链接，仅在微信APP分享时会优先采用；
+3. 增加`type`和`dataUrl`参数，用于设置`onMenuShareAppMessage`可使用；
+4. 支持`import`引用。
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## 用法 ##
 
-### Run your tests
-```
-npm run test
+### 使用模块加载器 ###
+
+```sh
+npm install --save-dev @fxss5201/wx-qq-share
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+```javascript
+import { setShareInfo } from '@fxss5201/wx-qq-share'
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+setShareInfo({
+  title: 'wx-qq-share定制微信、qq分享', // 分享标题
+  summary: '定制微信，手机QQ，QQ空间APP内的分享内容。定制微信，手机QQ，QQ空间APP内的分享内容。', // 分享内容
+  pic: 'http://www.fxss5201.cn/wx-qq-share/share.jpg', // 分享图片
+  url: 'http://www.fxss5201.cn/wx-qq-share/', // 分享链接
+  // wxUrl: '', // 微信分享链接时该链接域名或路径必须与当前页面对应的公众号JS安全域名一致即可
+  // 但手机QQ限制分享URL必须与页面URL同一域名，否则设置不生效，所以此处增加单独设置微信分享链接，微信分享会优先采用
+  type: '', // 分享类型,music、video或link，不填默认为link
+  dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+  // 微信权限验证配置信息，若不在微信传播，可忽略
+  WXconfig: {
+    swapTitleInWX: true, // 是否标题内容互换（仅朋友圈，因朋友圈内只显示标题）
+    appId: appId, // 公众号的唯一标识
+    timestamp: timestamp, // 生成签名的时间戳
+    nonceStr: nonceStr, // 生成签名的随机串
+    signature: signature // 签名
+  }
+})
+```

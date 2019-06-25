@@ -30,7 +30,7 @@ function _initWX (data) {
       let config = {
         title: data.title,
         desc: data.summary,
-        link: data.url,
+        link: data.wxUrl || data.url,
         imgUrl: data.pic,
         type: data.type || '', // 分享类型,music、video或link，不填默认为link
         dataUrl: data.dataUrl || '', // 如果type是music或video，则要提供数据链接，默认为空
@@ -47,7 +47,7 @@ function _initWX (data) {
       if (conf.swapTitleInWX) {
         wx.onMenuShareTimeline({
           title: data.summary,
-          link: data.url,
+          link: data.wxUrl || data.url,
           imgUrl: data.pic,
           success: function () {
             data.callback && data.callback()
