@@ -25,8 +25,7 @@ export default {
   data () {
     return {
       code1: `npm install --save-dev @fxss5201/wx-qq-share`,
-      code2: `import { setShareInfo } from '@fxss5201/wx-qq-share''
-      
+      code2: `import { setShareInfo } from '@fxss5201/wx-qq-share'
 setShareInfo({
   title: 'wx-qq-share定制微信、qq分享', // 分享标题
   summary: '定制微信，手机QQ，QQ空间APP内的分享内容。定制微信，手机QQ，QQ空间APP内的分享内容。', // 分享内容
