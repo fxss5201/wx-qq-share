@@ -1,6 +1,6 @@
 {
   "name": "@fxss5201/wx-qq-share",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "wx-qq-share定制微信、qq分享",
   "main": "lib/wx-qq-share.umd.min.js",
   "private": false,

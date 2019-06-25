@@ -43,3 +43,19 @@ setShareInfo({
   }
 })
 ```
+
+### script 引入 ###
+
+从 [wx-qq-share](https://github.com/fxss5201/wx-qq-share/tree/master/lib) 下载 wx-qq-share.umd.min.js 文件
+
+```html
+<script src="js/wx-qq-share.umd.min.js"></script>
+<script>
+setShareInfo({
+  title: '定制微信、qq分享title', // 分享标题
+  summary: '定制微信、qq分享title定制微信、qq分享title', // 分享内容
+  pic: 'http://www.fxss5201.cn/project/share-test/img/share.jpg', // 分享图片
+  url: 'http://www.fxss5201.cn/project/share-test/', // 分享链接
+})
+</script>
+```
